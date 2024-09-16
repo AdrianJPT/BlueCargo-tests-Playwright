@@ -1,2 +1,2 @@
 # BlueCargo-tests-Playwright
-Automated test for Saas platform BlueCargo
+Automated test for Saas platform BlueCargo.
