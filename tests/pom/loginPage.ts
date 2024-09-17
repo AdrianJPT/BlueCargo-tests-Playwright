@@ -29,7 +29,8 @@ export class LoginPage {
         await expect(this.$boxPassword).toBeEmpty();
     }
     public async existTitleForm() {
-        await expect(this.$titleForm).toContainText(/Sign in to BlueCargo/);
+        await expect(this.$titleForm).toContainText('Sign in to BlueCargo');
+    
     }
 
     public async existTitleEmail() {
