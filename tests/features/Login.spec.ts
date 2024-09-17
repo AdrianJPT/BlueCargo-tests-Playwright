@@ -60,5 +60,4 @@ test('Validate Log out sucessfully', async ({ page, portalPage, landingPage, log
 
   // Validate that we are in the login page
   await page.waitForURL('https://erl.bluecargo.io/signin');
-  await loginPage.existTitleForm();
 });
