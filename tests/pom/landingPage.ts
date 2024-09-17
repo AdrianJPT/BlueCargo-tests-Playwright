@@ -1,4 +1,6 @@
 import {expect, type Locator, Page} from '@playwright/test';
+import {  name as nameProfile } from '../data-test/data-input';
+
 
 export class LandingPage {
 
@@ -23,7 +25,7 @@ export class LandingPage {
         this.$profileCartInfo = this.page.locator('#app-page-template-root');
         this.$messageWelcome = this.page.locator('#app-page-template-content');
         this.$optionLogout = this.page.getByRole('heading', { name: 'Log Out' })
-        this.$profileCart = this.page.getByText('tetest-') 
+        this.$profileCart = this.page.getByRole('heading', { name: nameProfile, exact: true }) 
         
         this.$emptyReturnAppointment = this.page.getByRole('link', { name: 'Empty return appointments' })
         this.$allShipments = this.page.getByRole('link', { name: 'All shipments See all your' });
