@@ -29,7 +29,7 @@ export class LoginPage {
         await expect(this.$boxPassword).toBeEmpty();
     }
     public async existTitleForm() {
-        await expect(this.$titleForm).toContainText('Sign in to BlueCargo',  { timeout: 30000 }  );
+        await expect(this.$titleForm).toContainText(/Sign in to BlueCargo/);
     }
 
     public async existTitleEmail() {
