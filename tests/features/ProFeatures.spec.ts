@@ -1,7 +1,7 @@
 import { test, expect } from '../util/base';
 
 // Test data
-import { email, password, name } from '../data-test/data-input';
+import { email, password } from '../data-test/data-input';
 
 // Before Each - Login process
 test.beforeEach(async ({ page, loginPage, portalPage }) => {
@@ -26,7 +26,7 @@ test.afterEach(async ({ page, landingPage, loginPage }) => {
     await landingPage.clickOptionLogout();
 });
 
-test('Validate the freemiun users cannot access pro feature - Empty Return Appointment', async ({ page,portalPage, loginPage, landingPage, upgradePlanPage, anotherUpgradePlanPage, billingPage  }) => {
+test('Validate the freemiun users cannot access pro feature - Empty Return Appointment', async ({ landingPage, upgradePlanPage, billingPage  }) => {
 
     // freemiun users clicks a pro feature
   await landingPage.clickEmptyReturnAppointment();
@@ -44,7 +44,7 @@ test('Validate the freemiun users cannot access pro feature - Empty Return Appoi
 });
 
 
-test('Validate the freemiun users cannot access pro feature - All Shipments', async ({ page,portalPage, loginPage, landingPage, upgradePlanPage, anotherUpgradePlanPage, billingPage  }) => {
+test('Validate the freemiun users cannot access pro feature - All Shipments', async ({  landingPage, upgradePlanPage, billingPage  }) => {
 
   // freemiun users clicks a pro feature
   await landingPage.clickAllShipments();
@@ -61,7 +61,7 @@ test('Validate the freemiun users cannot access pro feature - All Shipments', as
 
 });
 
-test('Validate the freemiun users cannot access pro feature - D&D Dashboard', async ({ page,portalPage, loginPage, landingPage, upgradePlanPage, anotherUpgradePlanPage, billingPage  }) => {
+test('Validate the freemiun users cannot access pro feature - D&D Dashboard', async ({  landingPage, upgradePlanPage, billingPage  }) => {
 
   // freemiun users clicks a pro feature
   await landingPage.clickDandDDashboard();
@@ -85,15 +85,13 @@ test('Validate the freemiun users cannot access pro feature - Start your Dispute
   await landingPage.clickStartYourDispute();
  
   // message for access the pro feature
-  await upgradePlanPage.validateTitleMessage();
-  await upgradePlanPage.validateDescriptionMessage();
-  await upgradePlanPage.validateUpgradeButton();
-  await upgradePlanPage.clickUpgradeButton();
+  await anotherUpgradePlanPage.validateDescriptionMessage();
+  await anotherUpgradePlanPage.validateUpgradeButton();
+  await anotherUpgradePlanPage.clickUpgradeButton();
 
   // validate billing page message
   await billingPage.validateTittleMain();
   await billingPage.validateTittleProCart();
-
 });
 
 
