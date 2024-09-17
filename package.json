@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Automated test for Saas platform BlueCargo. branch is - home-landing",
   "main": "index.js",
-  "scripts": {    
+  "scripts": {
     "test:playwright": "npx playwright test",
-  "test:playwright:headed": "npx playwright test --headed",
-  "test:playwright:debug": "npx playwright test --debug"},
+    "test:playwright:headed": "npx playwright test --headed",
+    "test:playwright:debug": "npx playwright test --debug"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AdrianJPT/BlueCargo-tests-Playwright.git"
